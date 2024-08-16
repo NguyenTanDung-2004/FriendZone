@@ -1,0 +1,445 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/*root*/
+:root{
+    --colorOfFriendZone: #0866ff;
+    --backgroundBody: #e4e6eb;
+    --backgroundBox: #ffffff;
+    --borderInput: #ced0d4;
+    --continueGoogle: #42b72a;
+    --buttonHover: #1877f2;
+    --backgroundSearch: #f0f2f5;
+    --colorImage: invert(59%) sepia(11%) saturate(200%) saturate(135%) hue-rotate(176deg) brightness(96%) contrast(94%);
+}
+/*root*/
+
+/*header*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--backgroundBox);
+    height: 60px;
+    align-items: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100vw;
+    position: fixed;
+    z-index: 106;
+}
+
+.header .left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body > div > div.left > div{
+    position: relative;
+}
+
+body > div > div.left > div input{
+    background-color: var(--backgroundSearch);
+    border: none;
+    height: 45px;
+    width: 300px;
+    font-size: 16px;
+    padding-left: 40px;
+    border-radius: 50px;
+    outline: none;
+}
+
+body > div > div.left > div i{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+#imgLogo{
+    height: 45px;
+}
+
+body > div > div.right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body > div > div.right i{
+    font-size: 20px;
+    padding: 10px 12px;
+    border-radius: 50%;
+    background-color: #e4e6eb;
+    cursor: pointer;
+}
+
+#imgUser{
+    height: 40px;
+    border-radius: 50%;
+    width: 40px;
+    object-fit: cover;
+    cursor: pointer;
+}
+/*header*/
+
+/*divMain*/
+
+    /*header*/
+body > div.divMain{
+    width: 100vw;
+    max-width: 100vw;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--backgroundBody);
+    padding-top: 60px;
+    box-shadow: none;
+    padding-bottom: 50px;
+}
+
+body > div.divMain > div.divHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: fit-content;
+    background-color: var(--backgroundBox);
+    box-shadow: none;
+
+}
+
+body > div.divMain > div.divHeader .divBackgroundImage{
+    width: 80%;
+    position: relative;
+}
+
+body > div.divMain > div.divHeader .divBackgroundImage img{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+body > div.divMain > div.divHeader > .divBackgroundImage > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 8px 10px;
+    background-color: var(--backgroundBox);
+    gap: 10px;
+    border-radius: 8px;
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+body > div.divMain > div.divHeader > .divBackgroundImage > div p{
+    margin: 0;
+    font-weight: 550;
+}
+
+body > div.divMain > div.divHeader > div.divName{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80%;
+    padding-left: 50px;
+    gap: 20px;
+    position: relative;
+}
+
+body > div.divMain > div.divHeader > div.divName .divImg{
+    transform: translateY(-40px);
+    border: 4px solid var(--backgroundBox);
+    border-radius: 50%;
+}
+
+body > div.divMain > div.divHeader > div.divName .divImg i{
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    padding: 10px 10px;
+    background-color: var(--backgroundBody);
+    border-radius: 50%;
+}
+
+body > div.divMain > div.divHeader > div.divName .divImg img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+body > div.divMain > div.divHeader > div.divName .divRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    transform: translateY(-30px);
+}
+
+body > div.divMain > div.divHeader > div.divName .divRight p{
+    margin: 0;
+}
+
+body > div.divMain > div.divHeader > div.divName .divRight .pName{
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body > div.divMain > div.divHeader > div.divName .divImgFriends{
+    display: flex;
+    transform: translateY(10px);
+}
+
+body > div.divMain > div.divHeader > div.divName .divImgFriends img{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    gap: -5px;
+}
+body > div.divMain > div.divHeader > div.divName .divImgFriends i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: var(--backgroundBody);
+}
+
+body > div.divMain > div.divHeader > .divline{
+    width: 75%;
+    height: 2px;
+    background-color: var(--backgroundBody);
+    transform: translateY(-20px);
+}
+
+body > div.divMain > div.divHeader > .divFilter{
+    display: flex;
+    width: 75%;
+    gap: 30px;
+    font-size: 17px;
+    color: gray;
+    font-weight: 600;
+}
+body > div.divMain > div.divHeader > .divFilter p{
+    margin: 0;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+body > div.divMain > .divMain1{
+    background-color: var(--backgroundBody);
+}
+    /*header*/
+
+    /*divMain1*/
+body > div.divMain > div.divMain1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-left: 150px;
+    padding-right: 150px;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+body > div.divMain > div.divMain1 .divLeft1{
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+body > div.divMain > div.divMain1 .divRight1{
+    flex: 2.75;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+body > div.divMain > div.divMain1 .divLeft1 .divMain1Child{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--backgroundBox);
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+
+}
+
+body > div.divMain > div.divMain1 .divLeft1 .divIntro .pEditButton{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 40px;
+    justify-content: center;
+    background-color: var(--backgroundBody);
+    margin: 0;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+body > div.divMain > div.divMain1 .divLeft1 .divIntro .pEditButton:hover{
+    background-color: gray;
+    color: white;
+}
+
+body > div.divMain > div.divMain1 .divLeft1 .divIntroChild{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+body > div.divMain > div.divMain1 .divLeft1 .divIntroChild img{
+   filter: var(--colorImage);
+   height: 25px;
+}
+
+body > div.divMain > div.divMain1 .divLeft1 .divIntroChild p{
+    margin: 0;
+}
+
+body > div.divMain > div.divMain1 .divLeft1 .divMain1Child .divHeader1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body > div.divMain > div.divMain1 .divLeft1 .divMain1Child .divHeader1 p{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+body > div.divMain > div.divMain1 .divLeft1 .divMain1Child .divHeader1 .pSeeAllPhoto{
+    font-weight: 500;
+    color: var(--buttonHover);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#pIntro{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+body > div.divMain > div.divMain1 .divLeft1 .divMain1Child .divImg{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+body > div.divMain > div.divMain1 .divLeft1 .divPhoto{
+    padding-bottom: 20px;
+}
+
+body > div.divMain > div.divMain1 .divLeft1 .divMain1Child .divImg img{
+    width: calc(100% / 3 - 5px);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+body > div.divMain > div.divMain1 .divLeft1 .divFriend .divFriendChild{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+body > div.divMain > div.divMain1 .divLeft1 .divFriend .divFriendChild1{
+    width: calc(100% / 3 - 10px);
+    cursor: pointer;
+}
+
+body > div.divMain > div.divMain1 .divLeft1 .divFriend .divFriendChild img{
+    width: calc(100%);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+body > div.divMain > div.divMain1 .divLeft1 .divFriend .divFriendChild1 p{
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+}
+    /*divMain1*/
+/*divMain*/
+
+/*spinner*/
+body .divContainSpinner{
+    width: 300px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--backgroundBox);
+    z-index: 109;
+}
+body .divContainSpinner .spinner-border{
+    color: var(--colorOfFriendZone);
+}
+#pTextSpinner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+}
+/*spinner*/
+
+/*toast*/
+#toast {
+    visibility: hidden;
+    width: fit-content;
+    padding: 10px 10px;
+    margin-left: -125px;
+    background-color: gray;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 2px;
+    position: fixed;
+    z-index: 105;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.6s, visibility 0.6s;
+    border-radius: 10px;
+  }
+
+  #toast.show {
+    visibility: visible;
+    opacity: 1;
+  }
+/*toast*/

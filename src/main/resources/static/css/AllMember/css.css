@@ -1,0 +1,271 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*post*/
+:root{
+  --colorOfFriendZone: #0866ff;
+  --backgroundBody: #e4e6eb;
+  --backgroundBox: #ffffff;
+  --borderInput: #ced0d4;
+  --continueGoogle: #42b72a;
+  --buttonHover: #1877f2;
+  --backgroundSearch: #f0f2f5;
+  --colorImage: invert(59%) sepia(11%) saturate(200%) saturate(135%) hue-rotate(176deg) brightness(96%) contrast(94%);
+}
+body{
+    background-color: var(--backgroundSearch) !important;
+}
+
+/*header*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--backgroundBox);
+    height: 60px;
+    align-items: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100vw;
+    position: fixed;
+    z-index: 106;
+}
+
+.header .left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+body > div > div.left > div{
+    position: relative;
+}
+
+body > div > div.left > div input{
+    background-color: var(--backgroundSearch);
+    border: none;
+    height: 45px;
+    width: 300px;
+    font-size: 16px;
+    padding-left: 40px;
+    border-radius: 50px;
+    outline: none;
+}
+
+body > div > div.left > div i{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+#imgLogo{
+    height: 45px;
+}
+
+body > div > div.right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body > div > div.right i{
+    font-size: 20px;
+    padding: 10px 12px;
+    border-radius: 50%;
+    background-color: #e4e6eb;
+    cursor: pointer;
+}
+
+#imgUser{
+    height: 40px;
+    border-radius: 50%;
+    width: 40px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+body > div.header > div.left > p{
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--buttonHover);
+}
+/*header*/
+
+
+/*div main*/
+body .divMain{
+    padding-top: 100px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 50px;
+}
+
+
+body > div.divMain > div.divMainChild{
+    width: 70vw;
+    height: fit-content;
+    background-color: var(--backgroundBox);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+body > div.divMain > div.divMainChild > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body > div.divMain > div.divMainChild > div > p{
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+}
+
+body > div.divMain > div.divMainChild > div > .divLine{
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+    opacity: 0.2;
+}
+
+body > div.divMain > div.divMainChild > div.divSeeAll{
+    width: 100%;
+    padding: 5px 5px;
+    background-color: var(--borderInput);
+    border-radius: 5px;
+    color: black;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+body > div.divMain > div.divMainChild > div.divSeeAll p{
+    opacity: 0.5;
+    margin: 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+body > div.divMain > div.divMainChild > div.divContent > div.div1Friend{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding-left: 50px;
+    cursor: pointer;
+    padding: 10px 10px;
+    border-radius: 8px;
+    position: relative;
+}
+
+body > div.divMain > div.divMainChild > div.divContent > div.div1Friend:hover{
+    background-color: var(--backgroundSearch);
+}
+
+body > div.divMain > div.divMainChild > div.divContent > div.div1Friend img{
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+}
+
+body > div.divMain > div.divMainChild > div.divContent > div.div1Friend p{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+body > div.divMain > div.divMainChild > div.divContent{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+body > div.divMain > div.divMainChild > div.divContent > div > div.divAddFriend{
+    position: absolute;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    opacity: 1;
+    padding: 8px 8px;
+    background-color: var(--borderInput);
+    border-radius: 8px;
+}
+
+body > div.divMain > div.divMainChild > div.divContent > div > div.divAddFriend p{
+    opacity: 1;
+    font-size: 17px;
+}
+
+body > div.divMain > div.divRequestFriend.divMainChild > div.divContent > div > div.divChild{
+    position: absolute;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    padding: 8px 8px;
+    background-color: var(--borderInput);
+    border-radius: 8px;
+    gap: 5px;
+}
+
+body > div.divMain > div.divRequestFriend.divMainChild > div.divContent > div > div.divConfirm{
+    right: 110px;
+    color: white;
+    background-color: var(--buttonHover);
+    opacity: 1;
+}
+
+body > div.divMain > div.divRequestFriend.divMainChild > div.divContent > div > div.divConfirm p{
+    opacity: 1;
+}
+
+/*-----------------*/
+body > div.divMain > div.divMutualFriend.divMainChild > div.divContent > div > div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    right: 10px;
+    padding: 8px 8px;
+    background-color: var(--borderInput);
+    border-radius: 8px;
+}
+
+body > div.divMain > div.divMutualFriend.divMainChild > div.divContent > div > div p{
+    opacity: 1;
+}
+
+body > div.divMain > div.divUnknowFriend.divMainChild > div.divContent > div > div.divDelete.divChild{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    right: 150px;
+    padding: 8px 8px;
+    background-color: var(--borderInput);
+    border-radius: 8px;
+}
+
+body > div.divMain > div.divUnknowFriend.divMainChild > div.divContent > div > div.divDelete.divChild p{
+    opacity: 1;
+}

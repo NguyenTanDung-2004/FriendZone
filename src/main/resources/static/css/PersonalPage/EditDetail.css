@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+:root{
+    --colorOfFriendZone: #0866ff;
+    --backgroundBody: #f0f2f5;
+    --backgroundBox: #ffffff;
+    --borderInput: #ced0d4;
+    --continueGoogle: #42b72a;
+    --buttonHover: #1877f2;
+    --buttonCancel: #e4e6eb;
+    --textButtonCancel: #4b4f56;
+}
+#divEditDetail{
+    transition: 0.3s;
+    transform: scale(0);
+    position: fixed;
+    width: 35vw;
+    height: fit-content;
+    background-color: var(--backgroundBox);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    top: 10vh;
+    left: 35vw;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    z-index: 102;
+}
+
+#divEditDetail .divEditDetailChild{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: center;
+}
+
+#divEditDetail .divEditDetailChild p{
+    margin: 0;
+}
+
+#iCloseEditDetail{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    padding: 6px 9px;
+    background-color: var(--backgroundBody);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#divConfirm{
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: var(--buttonHover);
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#divEditDetail input{
+    border: 1px solid var(--borderInput);
+    height: 35px;
+    width: 220px;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#divEditDetail input:focus{
+    border: 2px solid var(--buttonHover);
+}
+
+#selectGender{
+    border: 1px solid var(--borderInput);
+    height: 35px;
+    width: 220px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,285 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*post*/
+:root{
+  --colorOfFriendZone: #0866ff;
+  --backgroundBody: #e4e6eb;
+  --backgroundBox: #ffffff;
+  --borderInput: #ced0d4;
+  --continueGoogle: #42b72a;
+  --buttonHover: #1877f2;
+  --backgroundSearch: #f0f2f5;
+  --colorImage: invert(59%) sepia(11%) saturate(200%) saturate(135%) hue-rotate(176deg) brightness(96%) contrast(94%);
+}
+body{
+    background-color: var(--backgroundSearch) !important;
+}
+
+/*header*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--backgroundBox);
+    height: 60px;
+    align-items: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100vw;
+    position: fixed;
+    z-index: 106;
+}
+
+.header .left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+body > div > div.left > div{
+    position: relative;
+}
+
+body > div > div.left > div input{
+    background-color: var(--backgroundSearch);
+    border: none;
+    height: 45px;
+    width: 300px;
+    font-size: 16px;
+    padding-left: 40px;
+    border-radius: 50px;
+    outline: none;
+}
+
+body > div > div.left > div i{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+#imgLogo{
+    height: 45px;
+}
+
+body > div > div.right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body > div > div.right i{
+    font-size: 20px;
+    padding: 10px 12px;
+    border-radius: 50%;
+    background-color: #e4e6eb;
+    cursor: pointer;
+}
+
+#imgUser{
+    height: 40px;
+    border-radius: 50%;
+    width: 40px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+body > div.header > div.left > p{
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--buttonHover);
+}
+/*header*/
+
+
+/*div main*/
+body .divMain{
+    padding-top: 60px;
+    width: 100vw;
+}
+
+body .divMain .divTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    background-color: var(--backgroundBox);
+    padding-bottom: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+body .divMain .divTitle p{
+    margin: 0;
+}
+
+body > div.divMain > div > img{
+    width: 78vw;
+    border-radius: 10px;
+    height: 45vh;
+    object-fit: cover;
+}
+
+body > div.divMain > div > div{
+    margin-top: 20px;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+body > div.divMain > div > div > p{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+body > div.divMain > div > div > div.divNumber{
+    display: flex;
+    align-items: center;
+    color: gray;
+}
+
+body > div.divMain > div > div > div.divImg{
+    display: flex;
+    gap: 1px;
+    align-items: center;
+}
+
+body > div.divMain > div > div > div.divImg img{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+
+body > div.divMain > div > div > div.divImg i{
+    padding: 5px 5px;
+    background-color: var(--backgroundSearch);
+    border-radius: 50%;
+}
+
+body > div.divMain > div > div > div.divEditImg{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 8px;
+    border-radius: 5px;
+    background-color: #e4e6eb;
+    width: fit-content;
+    font-weight: 600;
+    color: #050505;
+    position: absolute;
+    right: 170px;
+    top: -80px;
+    right: -20px;
+    cursor: pointer;
+}
+
+body > div.divMain > div > div > div.divInviteAndJoin{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 12vw;
+    top: 0;
+    right: 0;
+}
+
+body > div.divMain > div > div > div.divInviteAndJoin > div.div1{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 10px;
+    background-color: red;
+    width: fit-content;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+body > div.divMain > div > div > div.divInviteAndJoin > div.divInvite{
+    background-color: var(--colorOfFriendZone);
+    color: white;
+    font-size: 16px;
+}
+
+body > div.divMain > div > div > div.divInviteAndJoin > div.divInvite i{
+    font-size: 13px;
+}
+
+body > div.divMain > div > div > div.divInviteAndJoin > div.divJoin{
+    background-color: #e4e6eb;
+    color: #050505;
+    cursor: pointer;
+}
+
+body > div.divMain > div > div.divLine{
+    height: 2px;
+    width: 70vw;
+    background-color: var(--backgroundBody);
+    border-radius: 10px;
+}
+
+body > div.divMain > div > div.divFilter .divLeft{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+body > div.divMain > div > div.divFilter .divLeft p{
+    font-size: 15px;
+    color: gray;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+body > div.divMain > div > div.divFilter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none; /* Prevents the user from interacting with the element */
+    opacity: 0.5;         /* Makes the element look disabled */
+    cursor: not-allowed;  /
+}
+
+body > div.divMain > div > div.divFilter .divRight{
+    display: flex;
+    gap: 20px;
+    color: gray;
+}
+
+body > div.divMain > div > div.divFilter .divRight .div2{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+body > div.divMain > div > div.divFilter .divRight .div2 input{
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    color: gray;
+    padding-left: 5px;
+}
+
+body > div.divMain > div > div.divFilter > div.divRight > div.divDelete.div2{
+    padding: 10px 10px;
+    background-color: #e4e6eb;
+    border-radius: 10px;
+    color: #050505;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+body > div.divMain > div > div.divFilter > div.divLeft > p.pDiscussion{
+    color: var(--colorOfFriendZone);
+}
+/*divMain*/
+

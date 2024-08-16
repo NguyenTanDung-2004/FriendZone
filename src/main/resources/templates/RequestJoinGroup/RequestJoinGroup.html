@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FriendZone - PersonalPage</title>
+        <!--css-->
+        <link rel="stylesheet" href="../css/RequestJoinGroup/css.css"/>
+        <!--fontawesome-->
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/fontawesome.css">
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/brands.css">
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/solid.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Icons CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <!--thymeleaf-->
+        <html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <div class="header">
+            <div class="left">
+                <img id="imgLogo" src="../Img/ImgLogo.png" alt="">
+                <p>FriendZone</p>
+            </div>
+            <div class="right">
+                <img id="imgUser" th:src="|../FileUser/Image/${userId}/avatar.jpg|" alt="">
+            </div>
+        </div>
+
+        <div class="divMain">
+            <div class="divTitle">
+                <img th:src="|${backgrounPath}|" alt="">
+                <div class="divNameMembers" style="position: relative;">
+                    <p class="pName" th:text="${nameOfGroup}">Nhóm học lập trình Java.</p>
+                    <div class="divNumber">
+                        <p>Group member</p>
+                        <i class="bi bi-dot"></i>
+                        <p th:text="${numberOfMembers} + ' ' + members">2 members</p>
+                    </div>
+                    <div class="divImg">
+                        <i class="bi bi-three-dots"></i>
+                    </div>
+                    <!-- <div class="divEditImg">
+                        <i class="bi bi-pencil-fill"></i>
+                        <p>Edit Image</p>
+                    </div> -->
+                    <div class="divInviteAndJoin">
+                        <!-- <div class="divInvite div1">
+                            <i class="bi bi-plus-lg"></i>
+                            <p>Invite</p>
+                        </div> -->
+                        <div class="divJoin div1">
+                            <i class="fa-solid fa-people-group"></i>
+                            <p>Join group</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="divLine"></div>
+                <div class="divFilter">
+                    <div class="divLeft">
+                        <p class="pDiscussion">Discussion</p>
+                        <p class="pMembers">Members</p>
+                        <p class="pMedia">Media</p>
+                        <p class="pFiles">Files</p>
+                    </div>
+                    <div class="divRight">
+                        <div class="divInput div2">
+                            <input type="text" placeholder="Enter your key">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <!-- <div class="divDelete div2">
+                            <p>Delete</p>
+                            <i class="fa-solid fa-trash"></i>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script th:inline="javascript">
+            var list10MemberIds = /*[[${list10MemberIds}]]*/ '[]';
+            var statusOfRequestJoinGroup = /*[[${statusOfRequestJoinGroup}]]*/ 'defaultValue';
+        </script>
+
+        <script src="../js/RequestJoinGroup/VariableDeclaration.js"></script>
+        <script src="../js/RequestJoinGroup/EventForJoinGroup.js"></script>
+    </body>
+</html>

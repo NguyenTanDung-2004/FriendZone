@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FriendZone - LoginFail</title>
+        <!--css-->
+        <link rel="stylesheet" href="../css/LoginFail/LoginFail.css"/>
+        <!--fontawesome-->
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/fontawesome.css">
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/brands.css">
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/solid.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <html xmlns:th="http://www.thymeleaf.org"></html>
+    </head>
+   <body>
+        <div class="divBackground"></div>
+        <p>FriendZone</p>
+        <div class="divLogin">
+            <p id="pTitle">Fail to login into FriendZone</p>
+            <input id="inputEmail" class="loginChild" type="text" placeholder="Email address:">
+            <img src="../Img/ImgErrorInput.png" alt="">
+            <p id="pEmailError" class="pError"></p>
+            <input id="inputPassword" class="loginChild" type="password" placeholder="Password:">
+            <p id="pPasswordError" class="pError">The email that you've entered is incorrect.</p>
+            <p id="pButtonLogin" class="loginChild">Log in</p>
+            <p id="pFogotPassword" class="loginChild">Forgotten password?</p>
+        </div>
+        <div class="divContainSpinner">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <p id="pTextSpinner">You are logging...</p>
+        </div>
+   </body>
+</html>

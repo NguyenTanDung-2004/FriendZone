@@ -1,0 +1,166 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*post*/
+:root{
+  --colorOfFriendZone: #0866ff;
+  --backgroundBody: #e4e6eb;
+  --backgroundBox: #ffffff;
+  --borderInput: #ced0d4;
+  --continueGoogle: #42b72a;
+  --buttonHover: #1877f2;
+  --backgroundSearch: #f0f2f5;
+  --colorImage: invert(59%) sepia(11%) saturate(200%) saturate(135%) hue-rotate(176deg) brightness(96%) contrast(94%);
+}
+.divPost{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    background-color: var(--backgroundBox);
+    border-radius: 10px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    gap: 10px;
+    max-width: 50vw;
+}
+.divPost > div > div > img{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.divPost  .divPostHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.divPost  .divPostHeader .editPost{
+    padding: 8px 9px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.divPost  .divPostHeader .editPost:hover{
+    background-color: var(--backgroundBody);
+}
+
+.divPost  .divPostHeaderLeft{
+    display: flex;
+    gap: 20px;
+}
+
+.divPost  .divPostHeaderLeft .divNameAndTime p{
+    margin: 0;
+}
+
+.divPost  .divPostHeaderLeft .divNameAndTime i{
+    font-size: 13px;
+}
+
+.divPost > div > div > div .divTimeAndScope{
+    color: gray;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+}
+
+.divPost  .divPostHeaderLeft .divNameAndTime .pNameUser{
+    font-weight: 600;
+}
+
+.divPost > div.divNumberLikeAndComment{
+    display: flex;
+    justify-content: space-between;
+}
+
+.divPost > div.divNumberLikeAndComment p{
+    margin: 0;
+}
+
+.divPost > div.divNumberLikeAndComment p{
+    color: gray;
+}
+
+.divPost > div.divNumberLikeAndComment .divCommentAndShare{
+    display: flex;
+    gap: 5px;
+    color: gray;
+}
+
+.divPost > div.divLine{
+    height: 1px;
+    background-color: var(--backgroundBody);
+}
+.divPost > div.divLikeCommentShare{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.divPost > div.divLikeCommentShare .divLikeCommentShareChild{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);
+    cursor: pointer;
+}
+
+.divPost > div.divLikeCommentShare .divLikeCommentShareChild p{
+    margin: 0;
+}
+
+.divPost > div.divTagedFriend{
+  margin: 0;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.divPost > div.divTagedFriend p{
+  margin: 0;
+  padding: 5px 5px;
+  color: gray;
+  background-color: var(--backgroundBody);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.divPost > div.divTagedFriend p:hover{
+  text-decoration: underline;
+}
+
+#divDownLoadFile{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 5px;
+  border: 1px solid var(--buttonHover);
+  width: fit-content;
+  border-radius: 8px;
+  color: var(--buttonHover);
+}
+
+#divDownLoadFile a{
+  color: var(--buttonHover);
+  text-decoration: none;
+}
+
+#divDownLoadFile a:hover{
+  text-decoration: underline;
+}
+
+#divDownLoadFile i{
+  color: var(--buttonHover);
+}
+
+/*Post*/

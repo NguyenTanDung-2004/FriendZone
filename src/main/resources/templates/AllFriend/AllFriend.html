@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FriendZone - PersonalPage</title>
+        <!--css-->
+        <link rel="stylesheet" href="../css/PostDetail/PostDetail.css"/>
+        <link rel="stylesheet" href="../css/AllFriend/AllFriend.css"/>
+        <!--fontawesome-->
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/fontawesome.css">
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/brands.css">
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/solid.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Icons CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <!--thymeleaf-->
+        <html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <div class="divPost">
+            <div class="header">
+                <div class="left" style="cursor: pointer;">
+                    <img id="imgLogo" src="../Img/ImgLogo.png" alt="">
+                    <p>FriendZone</p>
+                </div>
+                <div class="right">
+                    <img id="imgUser" th:src="|../FileUser/Image/${userId}/avatar.jpg|" alt="">
+                </div>
+            </div>
+            <div class="divMain">
+                <div class="divNameOfUser">
+                    <p>Friends Of</p>
+                    <p class="pUserName" th:text="${userName}"></p>
+                </div>
+                <div class="divAllFriend">
+                    
+                </div>
+            </div>
+        </div>
+
+        <!--div filter-->
+        <div class="divFilter" style="position: fixed; bottom: 20px; display: flex; align-items: center; justify-content: center;
+                                        gap: 30px; left: calc(50vw - 75px); padding: 10px 10px; background-color: white; 
+                                        border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
+            <p class="pLeft" style="margin: 0px; font-size: 15px; font-weight: 600; color: white; cursor: pointer;">Mutual</p>
+            <p class="pRight" style="margin: 0px; font-size: 15px; font-weight: 600; cursor: pointer;">Unknow</p>
+            <div class="divYourChoice" style="position: absolute; height: 100%; width: 45%; background-color: #1877f2;
+                                                left: 0; z-index: -1; border-radius: 10px; transition: 0.3s;"></div>
+        </div>
+        <!--div filter-->
+
+        <!--javascript-->
+        <script src="../js/AllFriend/VariableDeclaration.js"></script>
+        <script src="../js/AllFriend/AllFriendAnimation.js"></script>
+        <script src="../js/AllFriend/FriendCreation.js"></script>
+        <script src="../js/AllFriend/GetFriend.js"></script>
+    </body>
+</html>

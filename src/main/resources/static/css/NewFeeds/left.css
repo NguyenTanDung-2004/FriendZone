@@ -1,0 +1,156 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+:root{
+    --colorOfFriendZone: #0866ff;
+    --backgroundBody: #e4e6eb;
+    --backgroundBox: #ffffff;
+    --borderInput: #ced0d4;
+    --continueGoogle: #42b72a;
+    --buttonHover: #1877f2;
+    --backgroundSearch: #f0f2f5;
+    --colorImage: invert(59%) sepia(11%) saturate(200%) saturate(135%) hue-rotate(176deg) brightness(96%) contrast(94%);
+}
+
+body > div.divMain .divMainChild1{
+    padding-top: 80px;
+}
+
+body > div.divMain .divMainChild1 .divLine{
+    height: 2px;
+    width: 100%;
+    background-color: var(--backgroundBody);
+}
+
+body > div.divMain > div.divLeft{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+body > div.divMain > div.divLeft.divMainChild1.divMainChild1_1 > div.divMainChild2 p{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+body > div.divMain > div.divLeft.divMainChild1.divMainChild1_1 > div.divMainChild2 i{
+    max-width: 35px;
+    max-height: 35px;
+    min-width: 35px;
+    min-height: 35px;
+    font-size: 16px;
+}
+
+body > div.divMain > div.divLeft.divMainChild1.divMainChild1_1 > div.divMainChild2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 5px 5px;
+    border-radius: 8px;
+}
+
+body > div.divMain > div.divLeft.divMainChild1.divMainChild1_1 > div.divMainChild2:hover{
+    background-color: var(--backgroundBody);
+}
+
+body > div.divMain > div.divLeft.divMainChild1.divMainChild1_1 > div.divDisplaySomeOfGroupAndPage{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+body > div.divMain > div.divLeft.divMainChild1.divMainChild1_1 > div.divDisplaySomeOfGroupAndPage .div1Element{
+    padding: 5px 5px;
+    cursor: pointer;
+}
+
+body > div.divMain > div.divLeft.divMainChild1.divMainChild1_1 > div.divDisplaySomeOfGroupAndPage .div1Element:hover{
+    background-color: var(--backgroundBody);
+    border-radius: 8px;
+}
+
+
+body > div.divMain > div.divLeft.divMainChild1.divMainChild1_1 > div.divDisplaySomeOfGroupAndPage .div1Element p{
+    margin: 0;
+    font-weight: 600;
+}
+
+body > div.divMain > div.divLeft.divMainChild1.divMainChild1_1 > div.divImgAndName.divMainChild2 > img{
+    max-width: 35px;
+    max-height: 35px;
+    min-width: 35px;
+    min-height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+body > div.divMain > div.divLeft.divMainChild1.divMainChild1_1 > div.divDisplaySomeOfGroupAndPage > div.div1Element{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+body > div.divMain > div.divLeft.divMainChild1.divMainChild1_1 > div.divDisplaySomeOfGroupAndPage > div.div1Element > img{
+    width: 35px;
+    height: 35px;
+    max-width: 35px;
+    max-height: 35px;
+    min-width: 35px;
+    min-height: 35px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+body > div.divMain > div.divLeft.divMainChild1.divMainChild1_1 > div.divSeeMorePageOrGroup.divMainChild2 > div{
+    padding: 5px 7px;
+    background-color: var(--backgroundBody);
+    border-radius: 50%;
+}
+
+
+/*search*/
+body > div.header > div.left > div.divResultOfSearchingUser{
+    padding-top: 80px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    overflow-y: auto;
+    position: relative;
+}
+
+body > div.header > div.left > div.divResultOfSearchingUser > div.div1Result{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px 10px;
+    border-radius: 8px;
+
+}
+
+body > div.header > div.left > div.divResultOfSearchingUser > div.div1Result:hover{
+    background-color: var(--backgroundBody);
+}
+
+body > div.header > div.left > div.divResultOfSearchingUser > div.div1Result img{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+}
+
+body > div.header > div.left > div.divResultOfSearchingUser > div.div1Result > img.imgGroup{
+    border-radius: 8px;
+}
+
+body > div.header > div.left > div.divResultOfSearchingUser > div.div1Result p{
+    margin: 0;
+    font-weight: 600;
+}

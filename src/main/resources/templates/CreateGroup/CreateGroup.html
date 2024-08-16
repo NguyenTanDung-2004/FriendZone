@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FriendZone - PersonalPage</title>
+        <!--css-->
+        <link rel="stylesheet" href="../css/CreateGroup/css.css"/>
+        <!--fontawesome-->
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/fontawesome.css">
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/brands.css">
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/solid.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Icons CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <!--thymeleaf-->
+        <html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <div class="header">
+            <div class="left">
+                <img id="imgLogo" src="../Img/ImgLogo.png" alt="">
+                <p>FriendZone</p>
+            </div>
+            <div class="right">
+                <img id="imgUser" th:src="|../FileUser/Image/${userId}/avatar.jpg|" alt="">
+            </div>
+        </div>
+        <div class="divMain">
+            <div class="divLeft">
+                <div class="divHeader">
+                    <p>Groups</p>
+                    <span class="x193iq5w xeuugli x13faqbe x1vvkbs x1xmvt09 x1nxh6w3 x1sibtaa xo1l8bm x12scifz"> › </span>
+                    <p>Create group</p>
+                </div>
+                <p class="pCreateGroup">Create group</p>
+                <div class="divImgName">
+                    <img th:src="|../FileUser/Image/${userId}/avatar.jpg|" alt="">
+                    <div class="divName">
+                        <p class="pName">Nguyễn Tấn Dũng</p>
+                        <p class="pAdmin">Admin</p>
+                    </div>
+                </div>
+                <div class="divGroupName divInput">
+                    <input type="text" placeholder="Enter group's name">
+                </div>
+                <div class="divInviteFriends divInput">
+                    <p>Invite friends</p>
+                    <i class="bi bi-tags-fill"></i>
+                </div>
+                <div class="divFriends">
+                    
+                    
+                </div>
+                <div class="divCreateGroup">Create Group</div>
+            </div>
+            <div class="divRight">
+                <div class="divReview">
+                    <div>
+                        <img src="../Img/backgrounGroup.avif" alt="">
+                        <p class="pName">Group name</p>
+                        <div class="divNumberMembers">
+                            <p>Group privacy</p>
+                            <i class="bi bi-dot"></i>
+                            <p>1 member</p>
+                        </div>
+                        <div class="divLine"></div>
+                        <div class="divFilter">
+                            <p>Posts</p>
+                            <p>Members</p>
+                            <p>Approval</p>
+                            <p>Media</p>
+                            <p>File</p>
+                        </div>
+                    </div>
+                    <div class="divCreatePost">
+                        <img class="imgUser" src="../Img/ImgUserFriendZone.png" alt="">
+                        <div>
+                            <div class="divInput">What's on your mind?</div>
+                            <div>
+                                <div class="divPhotoVideo div1">
+                                    <img src="../Img/ImageUploadImage.png" alt="">
+                                    <p>Photo/video</p>
+                                </div>
+                                <div class="divTagPeople div1">
+                                    <img src="../Img/ImageTagFriend.png" alt="">
+                                    <p>Tag people</p>
+                                </div>
+                                <div class="divIcon div1">
+                                    <img src="../Img/ImageGetIcon.png" alt="">
+                                    <p>Feeling/activity</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Invite friend-->
+            <div id="divTagFriend">
+                <div class="divTitle">
+                    <i id="iCloseTagFriend" class="fa-solid fa-xmark"></i>
+                    <p id="pTitleTagFriend">
+                        Invite friends
+                    </p>
+                </div>
+                <div id="divResultSearchTagFriend">
+                </div>
+            </div>
+            <!--Invite friend-->
+
+        </div>
+        <!--Edit successfull-->
+        <div class="divContainSpinner" style="display: none;">
+            <div class="spinner-border" role="status" style="display: none;">
+                
+            </div>
+            <i id="iTickSpinner" class="fa-solid fa-check" style="padding: 4px 5px; border-radius: 50%; background-color: #42b72a; color: white; display: block;"></i>
+            <p id="pTextSpinner">Create Group successfully!</p>
+        </div>
+        <!--Edit successfull-->
+
+        <script src="../js/CreateGroup/VariableDeclaration.js"></script>
+        <script src="../js/CreateGroup/Animation.js"></script>
+        <script src="../js/CreateGroup/GeneralFunction.js"></script>
+        <script src="../js/CreateGroup/CreateInvitedFriend.js"></script>
+        <script src="../js/CreateGroup/Create1FriendInInviteFriend.js"></script>
+        <script src="../js/CreateGroup/GetFriend.js"></script>
+        <script src="../js/CreateGroup/CreateGroup.js"></script>
+    </body>
+</html>

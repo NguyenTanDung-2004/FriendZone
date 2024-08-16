@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FriendZone - SignUp</title>
+        <!--css-->
+        <link rel="stylesheet" href="../css/SignUp/SignUp.css"/>
+        <!--fontawesome-->
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/fontawesome.css">
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/brands.css">
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/solid.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+         <!--thymeleaf-->
+         <html xmlns:th="http://www.thymeleaf.org">
+    </head>
+   <body>
+        <div class="divBackground"></div>
+        <p>FriendZone</p>
+        <div class="divSignup">
+            <p id="pTitle">Create a new account</p>
+            <p id="pBottomTitle">It's quick and easy.</p>
+            <div id="divLine"></div>
+            <div class="divEmailPassword">
+                <input id="inputEmail" class="loginChild" type="text" placeholder="Email address:">
+                <p id="pErrorEmail" style="color: red; margin: 0;padding-left: 10px; display: none;">Your email is wrong or exist!</p>
+                <input id="inputPassword" class="loginChild" type="text" placeholder="Password:">
+                <p id="pErrorPassword" style="color: red; margin: 0; padding-left: 10px; display: none;">Password must be include 8 characters!</p>
+            </div>
+            <p id="pDateOfBirth">Date of birth?</p>
+            <div class="divBirth">
+                <select id="selectDay" class="birthChild">
+                    
+                </select>
+                <select id="selectMonth" class="birthChild">
+                    <option value="Jan">Jan</option>
+                    <option value="Feb">Feb</option>
+                    <option value="Mar">Mar</option>
+                    <option value="Apr">Apr</option>
+                    <option value="May">May</option>
+                    <option value="Jun">Jun</option>
+                    <option value="Jul">Jul</option>
+                    <option value="Aug">Aug</option>
+                    <option value="Sep">Sep</option>
+                    <option value="Oct">Oct</option>
+                    <option value="Nov">Nov</option>
+                    <option value="Dec">Dec</option>
+                </select>
+                <select id="selectYear" class="birthChild">
+                    
+                </select>
+            </div>
+            <div class="divName">
+                <input id="inputFirtName" class="nameChild" type="text" placeholder="First Name:">
+                <input id="inputLastName" class="nameChild" type="text" placeholder="Last Name:">
+            </div>
+            <p id="pGender">Gender?</p>
+            <div class="divGender">
+                <div id="divFemale" class="genderChild">
+                    <p>Female</p>
+                    <input type="radio" name="raido">
+                </div>
+                <div id="divMale" class="genderChild">
+                    <p>Male</p>
+                    <input type="radio" name="raido">
+                </div>
+                <div id="divOthers" class="genderChild">
+                    <p>Others</p>
+                    <input type="radio" name="raido">
+                </div>
+            </div>
+            <p id="pSignUp">Sign Up</p>
+            <p id="pHaveAccount">Already have an account?</p>
+        </div>
+        <div class="divContainSpinner" style="display: none;">
+            <div class="spinner-border" role="status" style="">
+                
+            </div>
+            <i class="fa-solid fa-check" style="padding: 4px 5px; border-radius: 50%; background-color: #42b72a; color: white; display: none;"></i>
+            <p id="pTextSpinner">You are singing up...</p>
+        </div>
+        <script src="../js/SignUp/VariableDeclaration.js"></script>
+        <script src="../js/SignUp/EventFrontEnd.js"></script>
+        <script src="../js/SignUp/EventClickSignUp.js"></script>
+    </body>
+</html>

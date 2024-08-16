@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FriendZone - Login</title>
+        <!--css-->
+        <link rel="stylesheet" href="../css/LoginCss/Login.css"/>
+        <!--fontawesome-->
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/fontawesome.css">
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/brands.css">
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/solid.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!--thymeleaf-->
+        <html xmlns:th="http://www.thymeleaf.org">
+    </head>
+   <body>
+<!--left-->
+        <div class="left">
+            <div class="top">FriendZone</div>
+            <div class="bottom">FriendZone helps you connect and share with people in your life.</div>
+        </div>
+
+<!--right-->
+        <div class="right">
+            <div class="login">
+                <input id="inputEmail" class="loginChild" type="text" placeholder="Email address:">
+                <input id="inputPassword" class="loginChild" type="password" placeholder="Password:">
+                <p id="pButtonLogin" class="loginChild">Log in</p>
+                <p id="pFogotPassword" class="loginChild">Forgotten password?</p>
+                <div id="divLine" class="loginChild"></div>
+                <div id="divButtonContinueGoogle" class="loginChild">Continue with Google</div>
+            </div>
+
+            <div class="creatNewAccount">
+                <p class="first">Do you have an account?</p>
+                <p class="second"> Create an account</p>
+            </div>
+        </div>
+        <div class="divContainSpinner" style="display: none;">
+            <div class="spinner-border" role="status" style="">
+                
+            </div>
+            <i class="fa-solid fa-check" style="padding: 4px 5px; border-radius: 50%; background-color: #42b72a; color: white; display: none;"></i>
+            <p id="pTextSpinner">You are logging...</p>
+        </div>
+
+        <script src="../js/Login/VariableDeclaration.js"></script>
+        <script src="../js/Login/EventClickingLogin.js"></script>
+   </body>
+</html>

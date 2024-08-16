@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*body*/
+body{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    background-color: var(--backgroundBody);
+}
+
+/*root*/
+:root{
+    --colorOfFriendZone: #0866ff;
+    --backgroundBody: #f0f2f5;
+    --backgroundBox: #ffffff;
+    --borderInput: #ced0d4;
+    --continueGoogle: #42b72a;
+    --buttonHover: #1877f2;
+}
+
+/*Left*/
+body > div.left{
+    width: fit-content;
+    margin-bottom: 100px;
+}
+body > div.left > div.top{
+    color: var(--colorOfFriendZone);
+    font-size: 60px;
+    font-weight: 800;
+}
+body > div.left > div.bottom{
+    font-size: 24px;
+    width: 500px;
+}
+
+/*right*/
+body > div.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+body > div.right > div.login{
+    width: 33vw;
+    height: 60vh;
+    background-color: var(--backgroundBox);
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  /* Parameters for box-shadow: offset-x, offset-y, blur-radius, color */
+}
+body > div.right > div.creatNewAccount{
+    display: flex;
+    gap: 5px;
+}
+body > div.right > div.creatNewAccount p{
+    font-size: 14px;
+}
+body > div.right > div.creatNewAccount .second{
+    font-weight: 600;
+    cursor: pointer;
+}
+body > div.right > div.creatNewAccount .second:hover{
+    text-decoration: underline;
+}
+        /*css for login*/
+body > div.right > div.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+body > div.right > div.login .loginChild{
+    width:  90%;
+    height: 50px;
+}
+body > div.right > div.login input{
+    border-radius: 5px;
+    font-size: 17px;
+    padding-left: 14px;
+    padding-right: 14px;
+    outline: none;
+    border: 2px solid var(--borderInput);
+}
+body > div.right > div.login input:focus{
+    border: 2px solid var(--colorOfFriendZone);
+    font-size: 17px;
+}
+body > div.right > div.login p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#pButtonLogin{
+    background-color: var(--colorOfFriendZone);
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#pButtonLogin:hover{
+    background-color: var(--buttonHover);
+}
+#pFogotPassword{
+    height: fit-content;
+    color: var(--colorOfFriendZone);
+    font-size: 14px;
+    cursor: pointer;
+}
+#pFogotPassword:hover{
+    text-decoration: underline;
+}
+#divLine{
+    height: 2px;
+    background-color: var(--borderInput);
+}
+#divButtonContinueGoogle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    background-color: var(--continueGoogle);
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0 10px;
+    border-radius: 6px;
+}
+
+/*responsive*/
+@media (max-width: 842px) {
+    body{
+        padding-top: 30px;
+        flex-direction: column;
+    }
+    body > div.right > div.login{
+        width: 400px;
+    }
+    body > div.left{
+        margin-bottom: 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/*spinner*/
+body .divContainSpinner{
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--backgroundBox);
+}
+body .divContainSpinner .spinner-border{
+    color: var(--colorOfFriendZone);
+}
+#pTextSpinner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+}
+/*spinner*/

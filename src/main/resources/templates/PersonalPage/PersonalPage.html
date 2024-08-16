@@ -1,0 +1,476 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FriendZone - PersonalPage</title>
+        <!--css-->
+        <link rel="stylesheet" href="../css/PersonalPage/PersonalPage.css"/>
+        <link rel="stylesheet" href="../css/PersonalPage/Right.css"/>
+        <link rel="stylesheet" href="../css/PersonalPage/icon.css"/>
+        <link rel="stylesheet" href="../css/PersonalPage/TagFriend.css"/>
+        <link rel="stylesheet" href="../css/PersonalPage/EditDetail.css"/>
+        <!--fontawesome-->
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/fontawesome.css">
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/brands.css">
+        <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/solid.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Icons CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <!--thymeleaf-->
+        <html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <div class="header">
+            <div class="left">
+                <img id="imgLogo" src="../Img/ImgLogo.png" alt="">
+                <p style="margin: 0;
+                font-size: 25px;
+                font-weight: 800;
+                color: #0866ff;">FriendZone</p>
+            </div>
+            <div class="right">
+                <i class="fa-solid fa-plus"></i>
+                <i id="iBell" class="fa-solid fa-bell" style="font-size: 25px; position: relative;"><p style="position: absolute; z-index: 101;  color: white; top: 0; right: -3px; padding: 3px 5px; background-color: red; font-size: 12px; border-radius: 50%;">12</p></i>
+                <img id="imgUser" th:src="|../FileUser/Image/${userId1}/avatar.jpg|" alt="">
+            </div>
+        </div>
+        <div class="divMain">
+            <div class="divHeader">
+                <div class="divBackgroundImage">
+                    <img th:src="|../FileUser/Image/${userId}/background.jpg|" alt="" id="imgBackgroundImage">
+                    <div class="divEditCoverPhoto">
+                        <i class="fa-solid fa-camera"></i>
+                        <p>Edit cover photo</p>
+                    </div>
+                </div>
+                <div class="divName">
+                    <!--color friend:#e4e6eb - black, others: #0866ff - white-->
+                    <div class="divAddFriend" style="display: flex; position: absolute; right: 30px; top: 90px; 
+                                align-items: center; gap: 9px; color: black; padding: 10px 10px; 
+                                background-color: #e4e6eb; border-radius: 8px; cursor: pointer;">
+                        <i class="fa-solid fa-user-group"></i>
+                        <p style="margin: 0; font-weight: 600;">Unfriend</p> <!--Cancel request, Add friend, Friend-->
+                    </div>
+                    <div class="divImg">
+                        <img th:src="|../FileUser/Image/${userId}/avatar.jpg|" alt="">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <div class="divRight">
+                        <p class="pName" th:text="${userName}"></p>
+                        <p class="pNumberOfFriends" th:text="${numberOfFriends} + ' ' + friends">259 friends</p>   
+                        <div class="divImgFriends">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="divLine"></div>
+                <div class="divFilter">
+                    <p>Posts</p>
+                    <p>About</p>
+                    <p>Friends</p>
+                </div>
+            </div>
+            <div class="divMain1">
+                <div class="divLeft1 divMain1Child">
+                    <div class="divIntro divMain1Child">
+                        <p id="pIntro">Intro</p>
+                        <div class="divLive divIntroChild">
+                            <img src="../Img/ImgHome.png" alt="">
+                            <p th:text="'Live at ' + ${live}">Live at Ho Chi Minh.</p>
+                        </div>
+                        <div class="divFrom divIntroChild">
+                            <img src="../Img/ImgLocation.png" alt="">
+                            <p th:text="'From ' + ${from}">From Ninh Thuan.</p>
+                        </div>
+                        <div class="divStudy divIntroChild">
+                            <img src="../Img/ImgStudy.png" alt="">
+                            <p th:text="'Study at ' + ${study}">Study at UIT.</p>
+                        </div>
+                        <div class="divWork divIntroChild">
+                            <img src="../Img/ImgBag.png" alt="">
+                            <p th:text="'Work at ' + ${work}">Work at FPT Soft.</p>
+                        </div>
+                        <div class="divDOB divIntroChild">
+                            <img src="../Img/ImgBirth.png" alt="">
+                            <p th:text="'Date Of Birth: ' + ${dateOfBirth}">Date Of Birth: 20/08/2004</p>
+                        </div>
+                        <p class="pEditButton">Edit details</p>
+                    </div>
+
+                    <div class="divPhoto divMain1Child" >
+                        <div class="divHeader1">
+                            <p class="pPhoto">Photos</p>
+                            <p class="pSeeAllPhoto">See All Photos</p>
+                        </div>
+                        <div class="divImg">
+                            
+                        </div>
+                    </div>
+
+                    <div class="divFriend divMain1Child" >
+                        <div class="divHeader1">
+                            <p class="pPhoto">Friends</p>
+                            <p class="pSeeAllPhoto">See all friends</p>
+                        </div>
+                        <div class="divFriendChild">
+                        </div>
+                    </div>
+                </div>
+                <div class="divRight1">
+                    <!--create post -->
+                    <div class="divCreatePost">
+                        <img th:src="|../FileUser/Image/${userId}/avatar.jpg|" alt="">
+                        <div class="divInput">What's on your mind?</div>
+                    </div>
+                    <!--create post -->
+
+                    <!--post-->
+                    
+                    <!--post-->
+                </div>
+            </div>
+        </div>
+        <div id="divBlurBox"></div>
+
+        <!--createPostPost-->
+        <div id="divCreatePostBox">
+            <p id="pTitleCreatePost">Create Post</p>
+            <i id="iClose" class="fa-solid fa-xmark"></i>
+            <div class="divName">
+                <img th:src="|../FileUser/Image/${userId}/avatar.jpg|" alt="">
+                <div class="divNameChild">
+                    <p class="Name">Nguyễn Tấn Dũng</p>
+                    <div class="divScopePost">
+                        <i class="fa-solid fa-user-group divScopePostChild"></i>
+                        <!-- <p class="pScope divScopePostChild">Friends</p> -->
+                        <select id="selectScope" style="border: none; outline: none; background-color: initial;" class="birthChild">
+                            <option value="1">Friends</option>
+                            <option value="2">Public</option>
+                            <option value="3">Only you</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="divInput">
+                <textarea name="" id="" placeholder="What's on your mind?"></textarea>
+            </div>
+            <div id="divContainTagedFriend" class="divContainTagedFriend" style="margin-bottom: 10px; display: block;">
+            </div>
+            <div class="divContainImgVideo" style="margin-bottom: 10px; display: block;">
+                
+            </div>
+            <div class="divDeleteOld" style="display: flex; flex-direction: column; gap: 10px; padding-bottom: 10px;">
+                <div id="divDeleteTagedFriend" style="display: flex; align-items: center;     min-width: 230px;
+                max-width: 230px; padding: 10px 10px; border-radius: 10px; border: 1px solid #ced0d4;
+                justify-content: space-between; cursor: pointer;" class="genderChild">
+                    <p style="margin: 0;">Delete old taged friends</p>
+                    <input type="radio" name="raido">
+                </div>
+                <div id="divDeleteAttachedFile" style="display: flex; align-items: center;     min-width: 230px;
+                max-width: 230px; padding: 10px 10px; border-radius: 10px; border: 1px solid #ced0d4;
+                justify-content: space-between; cursor: pointer;" class="genderChild">
+                    <p style="margin: 0;">Delete old attached files</p>
+                    <input type="radio" name="raido1">
+                </div>
+            </div>
+            <div class="divAddToYourPost">
+                <p>Add to your post</p>
+                <div class="divImageAddToPost">
+                    <img id="imgAddFileToPost" src="../Img/ImageUploadImage.png" alt="">
+                    <img id="imgTagFriends" src="../Img/ImageTagFriend.png" alt="">
+                    <img id="imgGetIcon" src="../Img/ImageGetIcon.png" alt="">
+                </div>
+            </div>
+            <div class="divButtonPost">Post</div>
+        </div>
+        <!--createPostPox-->
+
+        <!--comment-->
+        <div id="divComment">
+            <div class="divHeaderComment">
+                <i class="fa-solid fa-arrow-left" style="position: absolute; left: 10px; top: 20px; background-color: #f0f2f5; border-radius: 50%; padding: 7px 8px; display: none; cursor: pointer;"></i>
+                <p>NguyenTanDung's post</p>
+                <i id="iCloseComment" class="fa-solid fa-xmark"></i>
+            </div>
+            <div id="divContentComment" class="divContentComment">
+                <div class="div1Comment">
+                    
+                </div>
+            </div>
+            <div class="divCommentComment">
+                <img th:src="|../FileUser/Image/${userId1}/avatar.jpg|" alt="">
+                <div class="divInput">
+                    <textarea id="textareaLevel1" type="text" placeholder="Write a comment..."></textarea>
+                    <div class="divAddToComment">
+                        <div class="divImgOrVideo">
+                            <i id="iCloseComment1" class="fa-solid fa-xmark" style="display: none;"></i>
+                            <div class="divTagedFriend">
+                                <i id="iCloseComment2" class="fa-solid fa-xmark" style="display: none;"></i>
+                            </div>
+                        </div>
+                        <div class="divIcon">
+                            <i class="bi bi-emoji-wink"></i>
+                            <i class="bi bi-camera"></i>
+                            <i class="bi bi-tags"></i>
+                        </div>
+                        <i id="iSendComment" class="fa-solid fa-paper-plane uploadCommentLevel1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--comment-->
+
+        <!--icon-->
+        <div id="divIcon">
+            <div id="divHeaderIcon">
+                <p>Icon</p>
+                <i id="iCloseIcon" class="fa-solid fa-xmark"></i>
+            </div>
+            <div id="divContentIcon">
+                <div class="divIconFace divContentIconChild"></div>
+                <div class="divIconAnimal divContentIconChild"></div>
+                <div class="divIconLove divContentIconChild"></div>
+                <div class="divIconFlower divContentIconChild"></div>
+                <div class="divIconHand divContentIconChild"></div>
+            </div>
+            <div id="divFilterIcon">
+                <div class="divFace divFilterIconChild">😀</div>
+                <div class="divAnimal divFilterIconChild">🐵</div>
+                <div class="divLove divFilterIconChild">❤️</div>
+                <div class="divFlower divFilterIconChild">🌼</div>
+                <div class="divHand divFilterIconChild">👍</div>
+            </div>
+        </div>
+        <!--icon-->
+
+        <!--Search Friend For Tag-->
+        <div id="divTagFriend">
+            <div class="divTitle">
+                <i id="iCloseTagFriend" class="fa-solid fa-xmark"></i>
+                <p id="pTitleTagFriend">
+                    Tag Friends
+                </p>
+            </div>
+            <i id="iSearch" class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="inputSearchTagFriend">
+            <div id="divResultSearchTagFriend">
+                
+            </div>
+        </div>
+        <!--Search Friend For Tag-->
+        <!--form display none-->
+        <form style="display: none;" id="formUploadFilePost" method="post" action="http://localhost:8080/FriendZone/upload" enctype="multipart/form-data">
+            <input id="inputUploadFileInPost" type="file" name="file" multiple/>
+            <button type="submit">Upload</button>
+        </form>
+         <!--form display none-->
+
+        <!--Edit detail-->
+        <div id="divEditDetail">
+            <div class="divFirstName divEditDetailChild">
+                <p>FirstName:</p>
+                <input type="text" id="inputFirstName" placeholder="FirstName:">
+            </div>
+            <div class="divLastName divEditDetailChild">
+                <p>LastName:</p>
+                <input type="text" id="inputLastName" placeholder="LastName:">
+            </div>
+            <div class="divGender divEditDetailChild">
+                <p>Gender:</p>
+                <select name="Gender" id="selectGender">
+                    <option value="1">Female</option>
+                    <option value="2">Male</option>
+                    <option value="3">Others</option>
+                </select>
+            </div>
+            <div class="divDob divEditDetailChild">
+                <p>Day of Birth:</p>
+                <input id="inputDateOfBirth" type="date">
+            </div>
+            <div class="divLive divEditDetailChild">
+                <p>Live:</p>
+                <input type="text" id="inputLive" placeholder="Live">
+            </div>
+            <div class="divFrom divEditDetailChild">
+                <p>From:</p>
+                <input type="text" id="inputFrom" placeholder="From">
+            </div>
+            <div class="divStudy divEditDetailChild">
+                <p>Study:</p>
+                <input type="text" id="inputStudy" placeholder="Study">
+            </div>
+            <div class="divWork divEditDetailChild">
+                <p>Work:</p>
+                <input type="text" id="inputWork" placeholder="Work">
+            </div>
+            <div id="divConfirm">Confirm</div>
+            <i id="iCloseEditDetail" class="fa-solid fa-xmark"></i>
+        </div>
+        <!--Edit detail-->
+        <!--Edit successfull-->
+        <div class="divContainSpinner" style="display: none;">
+            <div class="spinner-border" role="status" style="display: none;">
+                
+            </div>
+            <i id="iTickSpinner" class="fa-solid fa-check" style="padding: 4px 5px; border-radius: 50%; background-color: #42b72a; color: white; display: block;"></i>
+            <p id="pTextSpinner">Update successfully!</p>
+        </div>
+        <!--Edit successfull-->
+        <!--form update avt or background-->
+        <form style="display: none;" id="formUploadImageAvtAndBackground" method="post" action="http://localhost:8080/FriendZone/upload">
+            <input id="inputUploadImageAvtAndBackground" type="file" name="file" accept="image/*"/>
+            <input type="text" id="inputTypeFileFormUploadAvtAndBackground" name="typeFile">
+            <button type="submit">Upload</button>
+        </form>
+        <!--form update avt or background-->
+
+        <!--notifications-->
+        <div id="divNotifications" style="position: fixed; height: 80vh; width: 30vw; background-color: #ffffff;
+                                            top: 60px; right: 8px; border-radius: 10px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+                                            z-index: 101; padding-left: 10px; padding-right: 10px; display: none;
+                                             ">
+            <p style="font-size: 28px; font-weight: 800;">Notifications</p>
+            <div class="divNotificationsWithScroll" style="overflow-y: auto; height: 100%; display: flex; flex-direction: column; gap: 20px; max-height: 90%;">
+            </div>
+        </div>
+        <!--notifications-->
+
+        <!--div display img and video-->
+        <div id="divDisplayImg" style="position: fixed; width: 90vw; height: 90vh;; 
+                                    top: 5vh; left: 5vw; border-radius: 20px; background-color: rgba(55, 58, 64, 0.9);
+                                    display: none; justify-content: center; z-index: 107;">
+            <i id="iCloseDisplayImg" class="fa-solid fa-xmark" style="position: absolute; font-size: 20px; color: white; 
+                                                            padding: 5px 8px; background-color: gray; border-radius: 50%;
+                                                            top: 10px; right: 10px; cursor: pointer;"></i>
+            <i id="iLeftToRight" class="fa-solid fa-arrow-right" style="color: white; position: absolute; font-size: 30px;
+                                                                        right: 20px; top: 50%; cursor: pointer;"></i>
+            <i id="iRightToLeft" class="fa-solid fa-arrow-left" style="color: white; position: absolute; font-size: 30px;
+                                                                        left: 20px; top: 50%; cursor: pointer;"></i>
+
+            <img style="height: 100%; opacity: initial; max-width: 80%; object-fit: cover;" src="http://localhost:8080/FileUser/Image/4c34d6c1-08db-40df-9b5d-912758de2119/70d8df75-fed7-4376-98f5-1a92e260b1d1.jpg" alt="">
+            <video style="height: 100%; opacity: initial; max-width: 80%; object-fit: cover; display: none;" controls>
+                <source src="http://localhost:8080/FileUser/Video/4c34d6c1-08db-40df-9b5d-912758de2119/036d6dd5-f70f-4075-af90-11a02944b7da.mp4" type="video/mp4">
+            </video>        
+        </div>
+        <!--div display img and video-->
+
+        <!--toast-->
+        <div id="toast">Copied link successfully!</div>
+        <!--input to upload file in comment-->
+        <input style="display: none;" type="file" id="inputUploadInComment" accept="image/*,video/*">
+        <!--input to upload file in edit comment-->
+        <input style="display: none;" type="file" id="inputUploadInEditComment" accept="image/*,video/*">
+        <!--Edit comment-->
+        <div id="divEditComment">
+            <i id="iCloseEditComment" class="fa-solid fa-xmark"></i>
+            <div class="divHeader divEditCommentChild">
+                <p class="pName"></p>
+                <div class="divLine"></div>
+            </div>
+            <div class="divContent divEditCommentChild">
+                <textarea name="" id="" placeholder="Write your comment..."></textarea>
+                <div class="divTagedFriend">
+                    <i id="iCloseEditComment1" class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="divImgOrVideo">
+                    <i id="iCloseEditComment2" class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="divIcon">
+                    <i class="bi bi-emoji-wink"></i>
+                    <i class="bi bi-camera"></i>
+                    <i class="bi bi-tags"></i>
+                </div>
+            </div>
+            <div class="divButton divEditCommentChild">
+                <p class="pConfirm divButtonChild">Confirm edit</p>
+                <p class="pDelete divButtonChild">Delete comment</p>
+            </div>
+        </div>
+        <!--Edit comment-->
+
+
+        <img th:src="@{/external-images/194530cf-374a-40dd-b0a4-ae2ef0582380/avatar.jpg}" alt="">
+        <script src="../js/PersonalPage/VariableDeclaration.js"></script>
+        <script src="../js/PersonalPage/GeneralFunction.js"></script>
+        <script src="../js/PersonalPage/UpdatePostFromPostDetail.js"></script>
+        <script src="../js/PersonalPage/Notifications.js"></script>
+        <script src="../js/PersonalPage/Animation.js"></script>
+        <script src="../js/PersonalPage/Icon.js"></script>
+        <script src="../js/PersonalPage/AddIcon.js"></script>
+        <script src="../js/PersonalPage/CreatePost.js"></script>
+        <script src="../js/PersonalPage/EventForAddFileToPost.js"></script>
+        <script src="../js/PersonalPage/FriendArea.js"></script>
+        <script src="../js/PersonalPage/EventForTagFriend.js"></script>
+        <script src="../js/PersonalPage/EventEditDetail.js"></script>
+        <script src="../js/PersonalPage/UploadImageAvtAndBackground.js"></script>
+        <script src="../js/PersonalPage/Post.js"></script>
+        <script src="../js/PersonalPage/DisplayImgAndVideo.js"></script>
+        <script src="../js/PersonalPage/LikePost.js"></script>
+        <script src="../js/PersonalPage/SettingPost.js"></script>
+        <script src="../js/PersonalPage/Comment.js"></script>
+        <script src="../js/PersonalPage/EventForIcon.js"></script>
+        <script src="../js/PersonalPage/EditComment.js"></script>
+        <script src="../js/PersonalPage/ScrollToPost.js"></script>
+        <script th:inline="javascript">
+            var listFileImage = /*[[${listFileImage}]]*/ '[]';
+            var checkFriend = /*[[${checkFriend}]]*/ 'defaultValue';
+        </script>    
+        <script src="../js/PersonalPage/Photos.js"></script>
+        <script src="../js/PersonalPage/AddFriend.js"></script>
+        <script src="../js/PersonalPage/RemoveElements.js"></script>
+
+        <script>
+            var leftRect = document.querySelector('body > div.divMain > div.divMain1 > div.divLeft1.divMain1Child').getBoundingClientRect();
+            var width = document.querySelector('body > div.divMain > div.divMain1 > div.divLeft1.divMain1Child').width;
+            window.addEventListener('scroll', function() {
+                var left = document.querySelector('body > div.divMain > div.divMain1 > div.divLeft1.divMain1Child');
+                var right = document.querySelector("body > div.divMain > div.divMain1 > div.divRight1");
+                //var right = document.getElementById('right');
+                var heightViewPort = window.innerHeight;
+                // Get the bottom position of the left section relative to the viewport
+                var leftBottom = left.getBoundingClientRect().top;
+                // Check if the left section is scrolled past its height
+                if (leftBottom < -500) {
+                    left.style.transition = "0.3s";
+                    left.style.maxWidth = "0px";
+                    left.style.zIndex = "-1"
+                    right.style.maxWidth = "50vw";
+                } else {
+                    left.style.maxWidth = "initial";
+                    left.style.zIndex = "initial"
+                    right.style.maxWidth = "50vw";
+                }
+            });
+
+            var flag1 = 0;
+            var divDeleteTagedFriend = document.querySelector("#divDeleteTagedFriend");
+            divDeleteTagedFriend.addEventListener("click", () => 
+                {
+                    if (flag1 == 0){
+                        divDeleteTagedFriend.querySelector("input").checked = true;
+                        flag1 = 1;
+                    }
+                    else{
+                        divDeleteTagedFriend.querySelector("input").checked = false;
+                        flag1 = 0;
+                    }
+                }
+            )
+
+            var flag2 = 0;
+            var divDeleteAttachedFriend = document.querySelector("#divDeleteAttachedFile");
+            divDeleteAttachedFriend.addEventListener("click", () => 
+                {
+                    if (flag2 == 0){
+                        divDeleteAttachedFriend.querySelector("input").checked = true;
+                        flag2 = 1;
+                    }
+                    else{
+                        divDeleteAttachedFriend.querySelector("input").checked = false;
+                        flag2 = 0;
+                    }
+                }
+            )
+        </script>
+    </body>
+</html>

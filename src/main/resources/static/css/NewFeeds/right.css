@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+:root{
+    --colorOfFriendZone: #0866ff;
+    --backgroundBody: #e4e6eb;
+    --backgroundBox: #ffffff;
+    --borderInput: #ced0d4;
+    --continueGoogle: #42b72a;
+    --buttonHover: #1877f2;
+    --backgroundSearch: #f0f2f5;
+    --colorImage: invert(59%) sepia(11%) saturate(200%) saturate(135%) hue-rotate(176deg) brightness(96%) contrast(94%);
+}
+
+body > div.divMain > div.divRight.divMainChild1.divMainChild1_1 > div > p{
+    font-size: 18px;
+    font-weight: 600;
+    color: gray;
+    margin: 0;
+}
+
+body > div.divMain > div.divRight.divMainChild1.divMainChild1_1 > div > div.divPage{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+body > div.divMain > div.divRight.divMainChild1.divMainChild1_1 > div > div.divPage .div1Page{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 5px 5px;
+}
+
+body > div.divMain > div.divRight.divMainChild1.divMainChild1_1 > div > div.divPage .div1Page:hover{
+    background-color: var(--backgroundBody);
+    border-radius: 8px;
+}
+
+body > div.divMain > div.divRight.divMainChild1.divMainChild1_1 > div > div.divPage .div1Page img{
+    max-width: 35px;
+    max-height: 35px;
+    min-width: 35px;
+    min-height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+body > div.divMain > div.divRight.divMainChild1.divMainChild1_1 > div > div.divPage .div1Page p{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+body > div.divMain > div.divRight.divMainChild1.divMainChild1_1 > div.divPageAndProfiles{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+body > div.divMain > div.divRight.divMainChild1.divMainChild1_1 > div > div.divFriends{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+body > div.divMain > div.divRight.divMainChild1.divMainChild1_1 > div > div.divFriends .div1Friend{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 5px 5px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+body > div.divMain > div.divRight.divMainChild1.divMainChild1_1 > div > div.divFriends .div1Friend:hover{
+    background-color: var(--backgroundBody);
+}
+
+body > div.divMain > div.divRight.divMainChild1.divMainChild1_1 > div > div.divFriends .div1Friend img{
+    max-width: 35px;
+    max-height: 35px;
+    min-width: 35px;
+    min-height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+body > div.divMain > div.divRight.divMainChild1.divMainChild1_1 > div > div.divFriends .div1Friend p{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+

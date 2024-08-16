@@ -1,0 +1,679 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*post*/
+:root{
+  --colorOfFriendZone: #0866ff;
+  --backgroundBody: #e4e6eb;
+  --backgroundBox: #ffffff;
+  --borderInput: #ced0d4;
+  --continueGoogle: #42b72a;
+  --buttonHover: #1877f2;
+  --backgroundSearch: #f0f2f5;
+  --colorImage: invert(59%) sepia(11%) saturate(200%) saturate(135%) hue-rotate(176deg) brightness(96%) contrast(94%);
+}
+body{
+    background-color: var(--backgroundSearch) !important;
+}
+
+/*header*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--backgroundBox);
+    height: 60px;
+    align-items: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100vw;
+    position: fixed;
+    z-index: 106;
+}
+
+.header .left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+body > div > div.left > div{
+    position: relative;
+}
+
+body > div > div.left > div input{
+    background-color: var(--backgroundSearch);
+    border: none;
+    height: 45px;
+    width: 300px;
+    font-size: 16px;
+    padding-left: 40px;
+    border-radius: 50px;
+    outline: none;
+}
+
+body > div > div.left > div i{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+#imgLogo{
+    height: 45px;
+}
+
+body > div > div.right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body > div > div.right i{
+    font-size: 20px;
+    padding: 10px 12px;
+    border-radius: 50%;
+    background-color: #e4e6eb;
+    cursor: pointer;
+}
+
+#imgUser{
+    height: 40px;
+    border-radius: 50%;
+    width: 40px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+body > div.header > div.left > p{
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--buttonHover);
+}
+/*header*/
+
+
+/*div main*/
+body .divMain{
+    padding-top: 60px;
+    width: 100vw;
+    padding-bottom: 100px;
+}
+
+body .divMain .divTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    background-color: var(--backgroundBox);
+    padding-bottom: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+body .divMain .divTitle p{
+    margin: 0;
+}
+
+body > div.divMain > div > img{
+    width: 78vw;
+    border-radius: 10px;
+    height: 45vh;
+    object-fit: cover;
+}
+
+body > div.divMain > div > div{
+    margin-top: 20px;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+body > div.divMain > div > div > p{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+body > div.divMain > div > div > div.divNumber{
+    display: flex;
+    align-items: center;
+    color: gray;
+}
+
+body > div.divMain > div > div > div.divImg{
+    display: flex;
+    gap: 1px;
+    align-items: center;
+}
+
+body > div.divMain > div > div > div.divImg img{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+
+body > div.divMain > div > div > div.divImg i{
+    padding: 15px 15px;
+    background-color: var(--backgroundSearch);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body > div.divMain > div > div > div.divEditImg{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 8px;
+    border-radius: 5px;
+    background-color: #e4e6eb;
+    width: fit-content;
+    font-weight: 600;
+    color: #050505;
+    position: absolute;
+    right: 170px;
+    top: -80px;
+    right: -20px;
+    cursor: pointer;
+}
+
+body > div.divMain > div > div > div.divInviteAndJoin{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 12vw;
+    top: 0;
+    right: 0;
+}
+
+body > div.divMain > div > div > div.divInviteAndJoin > div.div1{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 10px;
+    background-color: red;
+    width: fit-content;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+body > div.divMain > div > div > div.divInviteAndJoin > div.divInvite{
+    background-color: var(--colorOfFriendZone);
+    color: white;
+    font-size: 16px;
+}
+
+body > div.divMain > div > div > div.divInviteAndJoin > div.divInvite i{
+    font-size: 13px;
+}
+
+body > div.divMain > div > div > div.divInviteAndJoin > div.divJoin{
+    background-color: #e4e6eb;
+    color: #050505;
+}
+
+body > div.divMain > div > div.divLine{
+    height: 2px;
+    width: 70vw;
+    background-color: var(--backgroundBody);
+    border-radius: 10px;
+}
+
+body > div.divMain > div > div.divFilter .divLeft{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+body > div.divMain > div > div.divFilter .divLeft p{
+    font-size: 15px;
+    color: gray;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+body > div.divMain > div > div.divFilter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body > div.divMain > div > div.divFilter .divRight{
+    display: flex;
+    gap: 20px;
+    color: gray;
+}
+
+body > div.divMain > div > div.divFilter .divRight .div2{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+body > div.divMain > div > div.divFilter .divRight .div2 input{
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    color: gray;
+    padding-left: 5px;
+}
+
+body > div.divMain > div > div.divFilter > div.divRight > div.divDelete.div2{
+    padding: 10px 10px;
+    background-color: #e4e6eb;
+    border-radius: 10px;
+    color: #050505;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+body > div.divMain > div > div.divFilter > div.divLeft > p.pDiscussion{
+    color: var(--colorOfFriendZone);
+}
+/*divMain*/
+
+
+/*divContent*/
+body > div.divMain > div.divContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+/*divContent*/
+
+
+/*divBlurBox*/
+#divBlurBox{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    background-color: var(--backgroundBody);
+    opacity: 0.7;
+    display: none;
+}
+/*divBlurBox*/
+
+/*create post box*/
+#divCreatePostBox{
+    height: fit-content;
+    max-height: 80vh;
+    width: 38vw;
+    background-color: red;
+    position: fixed;
+    left: calc(50vw - 19vw);
+    top: calc(50vh - 35vh);
+    border-radius: 10px;
+    padding-bottom: 30px;
+    transform: scale(0);
+    transition: 0.3s;
+}
+
+#pTitleCreatePost{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--backgroundBody);
+}
+
+#divCreatePostBox{
+    z-index: 102;
+    background-color: var(--backgroundBox);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#iClose{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 6px 9px;
+    font-size: 20px;
+    background-color: var(--backgroundBody);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#divCreatePostBox .divName{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+#divCreatePostBox .divName img{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#divCreatePostBox .divName .divNameChild
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#divCreatePostBox .divName .divNameChild p{
+    margin: 0;
+    font-weight: 600;
+}
+
+#divCreatePostBox .divName .divNameChild .divScopePost{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--backgroundBody);
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    max-width: fit-content;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+#divCreatePostBox .divName .divNameChild .divScopePost .divScopePostChild{
+    font-weight: 500;
+    font-size: 13px;
+}
+
+#divCreatePostBox .divInput textarea{
+    width: 100%;
+    margin-top: 20px;
+    height: 150px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 20px;
+}
+
+body > div.divMain > div.divMain1 > div.divRight1 > div.divPost > div.divTagedFriend{
+    margin: 0;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+body > div.divMain > div.divMain1 > div.divRight1 > div.divPost > div.divTagedFriend p{
+    margin: 0;
+    padding: 5px 5px;
+    color: gray;
+    background-color: var(--backgroundBody);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+body > div.divMain > div.divMain1 > div.divRight1 > div.divPost > div.divTagedFriend p:hover{
+    text-decoration: underline;
+}
+
+#divDownLoadFile{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 5px;
+    border: 1px solid var(--buttonHover);
+    width: fit-content;
+    border-radius: 8px;
+}
+
+#divDownLoadFile i{
+    color: var(--buttonHover);
+}
+
+#divCreatePostBox .divAddToYourPost{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    border: 1px solid var(--backgroundBody);
+    border-radius: 10px;
+}
+
+#divCreatePostBox .divAddToYourPost p{
+    margin: 0;
+    font-weight: 600;
+}
+
+#divCreatePostBox .divAddToYourPost .divImageAddToPost{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#divCreatePostBox .divAddToYourPost .divImageAddToPost img{
+    height: 25px;
+    width: 25px;
+    object-fit: cover;
+}
+
+#divCreatePostBox .divButtonPost{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: var(--buttonHover);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    /*file in create post*/
+    #divCreatePostBox > div.divContainImgVideo{
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        min-width: 100%;
+        max-height: 50px;
+        overflow-y: hidden;
+        display: flex !important;
+        gap: 10px;
+    }
+
+    #divCreatePostBox > div.divContainImgVideo .divFile{
+        padding: 5px 5px;
+        background-color: var(--backgroundBody);
+        width: fit-content;
+        max-height: 40px;
+        border-radius: 8px;
+        color: gray;
+    }
+    /*file in create post*/
+
+    /*taged friend in create post*/
+    #divCreatePostBox #divContainTagedFriend{
+        display: flex !important;
+        overflow-x: auto !important;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        gap: 10px;
+        overflow-y: hidden;
+        
+    }
+
+    #divCreatePostBox #divContainTagedFriend .divFriend{
+        padding: 5px 5px;
+        background-color: var(--backgroundBody);
+        width: fit-content !important;
+        max-height: 40px;
+        min-width: 100px;
+        border-radius: 8px;
+        color: gray;
+        min-width: 180px;
+    }
+    /*taged friend in create post*/
+/*create post box*/
+
+/*spinner*/
+body .divContainSpinner{
+    width: 300px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--backgroundBox);
+    z-index: 109;
+}
+body .divContainSpinner .spinner-border{
+    color: var(--colorOfFriendZone);
+}
+#pTextSpinner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+}
+/*spinner*/
+
+/*icon*/
+#divIcon{
+    transition: 0.3s;
+    transform: scale(0);
+    position: fixed;
+    height: 50vh;
+    width: 30vw;
+    background-color: var(--backgroundBox);
+    top: calc(25vh);
+    left: calc(35vw);
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px 10px;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 109;
+}
+
+#divContentIcon {
+    display: flex;
+    justify-content: flex-start;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#divContentIcon .divContentIconChild{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    gap: 10px;
+    justify-content: center;
+}
+
+#newDiv{
+    padding: 2px 3px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#newDiv:hover{
+    background-color: var(--backgroundBody);
+}
+
+#divHeaderIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#divHeaderIcon p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#divHeaderIcon i{
+    position: absolute;
+    padding: 5px 8px;
+    background-color: var(--backgroundBody);
+    border-radius: 50%;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#divFilterIcon{
+    border-top: 2px solod var(--backgroundBody);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 10px;
+}
+
+#divFilterIcon div{
+    cursor: pointer;
+    padding: 3px 3px;
+    border-radius: 50%;
+}
+
+#divFilterIcon div:hover{
+    background-color: var(--backgroundBody);
+}
+/*icon*/
+
+/*toast*/
+#toast {
+    visibility: hidden;
+    width: fit-content;
+    padding: 10px 10px;
+    margin-left: -125px;
+    background-color: gray;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 2px;
+    position: fixed;
+    z-index: 105;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.6s, visibility 0.6s;
+    border-radius: 10px;
+  }
+
+  #toast.show {
+    visibility: visible;
+    opacity: 1;
+  }
+/*toast*/
+
+#divCreatePostBox.divEditPost{
+    z-index: 107;
+    top: 1vh;
+    max-height: 95vh;
+}

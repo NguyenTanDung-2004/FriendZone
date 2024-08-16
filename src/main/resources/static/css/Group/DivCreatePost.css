@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*post*/
+:root{
+  --colorOfFriendZone: #0866ff;
+  --backgroundBody: #e4e6eb;
+  --backgroundBox: #ffffff;
+  --borderInput: #ced0d4;
+  --continueGoogle: #42b72a;
+  --buttonHover: #1877f2;
+  --backgroundSearch: #f0f2f5;
+  --colorImage: invert(59%) sepia(11%) saturate(200%) saturate(135%) hue-rotate(176deg) brightness(96%) contrast(94%);
+}
+
+body > div.divMain > div.divContent > div{
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    background-color: var(--backgroundBox);
+    gap: 20px;
+    align-items: center;
+    width: 90%;
+}
+
+body > div.divMain > div.divContent > div img{
+    min-width: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    min-height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+body > div.divMain > div.divContent > div .divInput{
+    width: 100%;
+    background-color: var(--backgroundSearch);
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    color: var(gray);
+    height: 40px;
+    cursor: pointer;
+}
